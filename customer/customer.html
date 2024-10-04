@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    #big {
+        height: 1000px;
+        overflow: hidden;
+    }
+
+    .manage {
+        position: relative;
+        left: 500px;
+        top: 50px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 900px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        position: relative;
+        left: 200px;
+        top: 90px;
+        box-shadow: #2f3542 0 0 20px;
+
+    }
+
+    .form label {
+        position: relative;
+        right: 5px;
+
+    }
+
+    .form label .input {
+        width: 100%;
+        padding: 10px 10px 20px 10px;
+        outline: 0;
+        border: 1px solid rgba(105, 105, 105, 0.397);
+        border-radius: 10px;
+
+
+    }
+
+    .form label .input + span {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        color: grey;
+        font-size: 0.9em;
+        cursor: text;
+        transition: 0.3s ease;
+    }
+
+    .form label .input:placeholder-shown + span {
+        top: 15px;
+        font-size: 0.9em;
+    }
+
+    .form label .input:focus + span, .form label .input:valid + span {
+        top: 0px;
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+
+    .form label .input:valid + span {
+        color: green;
+    }
+
+    #customer_btn {
+        position: relative;
+        left: 500px;
+        top: -20px;
+    }
+
+    #table {
+       position: relative;
+       width: 1000px;
+       top: 150px;
+        margin: auto;
+    }
+
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #2f3542">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">Kushan POS System</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="../../POS-System/index.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/item/item.html">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order Details</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 border" id="big" style="background-color: #f8f9fa">
+    <div class="row">
+        <h1 class="manage" >Customer Manage</h1>
+        <div class="col-lg-4">
+            <form class="form">
+                <label>
+                    <input class="input"  type="number" placeholder="" required="">
+                    <span>ID</span>
+                </label>
+                <label>
+                    <input class="input" type="text" placeholder="" required="">
+                    <span>Name</span>
+                </label>
+                <label>
+                    <input class="input" type="text" placeholder="" required="">
+                    <span>Address</span>
+                </label>
+                <label>
+                    <input class="input" type="tel" placeholder="" required="">
+                    <span>Tel</span>
+                </label>
+                <div id="customer_btn" class="mt-5" >
+                    <button type="button" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="reset" class="btn btn-warning">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-striped" id="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Tel</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Rukshan</td>
+            <td>Galle</td>
+            <td>0724356765</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Kavindu</td>
+            <td>Kalutara</td>
+            <td>0714545321</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Kushan</td>
+            <td>Mathugama</td>
+            <td>0786765454</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Dila</td>
+            <td>Maggona</td>
+            <td>0786756543</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>Randika</td>
+            <td>Kalutara</td>
+            <td>0765656789</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

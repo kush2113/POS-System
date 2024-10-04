@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    /*!*logout button*!*/
+    /*.Btn {*/
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*    justify-content: flex-start;*/
+    /*    width: 45px;*/
+    /*    height: 45px;*/
+    /*    border: none;*/
+    /*    border-radius: 50%;*/
+    /*    cursor: pointer;*/
+    /*    position: relative;*/
+    /*    overflow: hidden;*/
+    /*    transition-duration: .3s;*/
+    /*    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);*/
+    /*    background-color: rgb(255, 65, 65);*/
+    /*}*/
+
+    /*!* plus sign *!*/
+    /*.sign {*/
+    /*    width: 100%;*/
+    /*    transition-duration: .3s;*/
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*}*/
+
+    /*.sign svg {*/
+    /*    width: 17px;*/
+    /*}*/
+
+    /*.sign svg path {*/
+    /*    fill: white;*/
+    /*}*/
+    /*!* text *!*/
+    /*.text {*/
+    /*    position: absolute;*/
+    /*    right: 0%;*/
+    /*    width: 0%;*/
+    /*    opacity: 0;*/
+    /*    color: white;*/
+    /*    font-size: 1.2em;*/
+    /*    font-weight: 600;*/
+    /*    transition-duration: .3s;*/
+    /*}*/
+    /*!* hover effect on button width *!*/
+    /*.Btn:hover {*/
+    /*    width: 125px;*/
+    /*    border-radius: 40px;*/
+    /*    transition-duration: .3s;*/
+    /*}*/
+
+    /*.Btn:hover .sign {*/
+    /*    width: 30%;*/
+    /*    transition-duration: .3s;*/
+    /*    padding-left: 20px;*/
+    /*}*/
+    /*!* hover effect button's text *!*/
+    /*.Btn:hover .text {*/
+    /*    opacity: 1;*/
+    /*    width: 70%;*/
+    /*    transition-duration: .3s;*/
+    /*    padding-right: 10px;*/
+    /*}*/
+    /*!* button click effect*!*/
+    /*.Btn:active {*/
+    /*    transform: translate(2px ,2px);*/
+    /*}*/
+
+    header {
+        overflow: hidden;
+    }
+
+    #customer {
+        height: 200px;
+        position: relative;
+        top: 100px;
+        right: 200px;
+        margin: auto;
+        font-size: 2em;
+    }
+
+    #header {
+        height: 200px;
+    }
+
+    #item {
+        height: 200px;
+        position: relative;
+        top: -115px;
+        left: 200px;
+        margin: auto;
+        font-size: 2em;
+    }
+
+    #header2 {
+        height: 200px;
+    }
+
+    #order {
+        height: 200px;
+        position: relative;
+        top: -50px;
+        right: 200px;
+        margin: auto;
+        font-size: 2em;
+    }
+    #header3 {
+        height: 200px;
+    }
+
+    #total-sales {
+        height: 200px;
+        position: relative;
+        top: -266px;
+        left: 200px;
+        margin: auto;
+        font-size: 2em;
+    }
+
+    #header4 {
+        height: 200px;
+    }
+
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #2f3542">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Kushan POS System</a>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../POS-Systemss/customer/customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="#">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Order Details</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="card text-bg-primary mb-3" id="customer" style="max-width: 18rem;">
+    <div class="card-header" id="header" >Customer</div>
+    <div class="card-body">
+        <p class="card-text">150</p>
+    </div>
+</div>
+
+<div class="card text-bg-success mb-3" id="item" style="max-width: 18rem;">
+    <div class="card-header" id="header2">Item</div>
+    <div class="card-body">
+        <p class="card-text">100</p>
+    </div>
+</div>
+
+<div class="card text-bg-secondary mb-3" id="order" style="max-width: 18rem;">
+    <div class="card-header" id="header3">Order</div>
+    <div class="card-body">
+        <p class="card-text">200</p>
+    </div>
+</div>
+
+<div class="card text-bg-danger mb-3" id="total-sales" style="max-width: 18rem;">
+    <div class="card-header" id="header4">Total Sales</div>
+    <div class="card-body">
+        <p class="card-text">Rs.2000</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container mt-5 border" style="background-color: #f8f9fa">-->
+<!--    <h1 class="mb-4">Dashboard</h1>-->
+<!--    <div class="row">-->
+<!--        &lt;!&ndash; Total Customers Card &ndash;&gt;-->
+<!--        <div class="col-lg-3 col-md-6 mb-4">-->
+<!--            <div class="card bg-info text-white">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Total Customers</h5>-->
+<!--                    <p class="card-text" id="totalCustomers" style="font-size: 40px; font-weight: bold">150</p>-->
+<!--                </div>-->
+<!--                <div class="card-footer">-->
+<!--                    <a href="#" class="text-white">View Details</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Total Items Card &ndash;&gt;-->
+<!--        <div class="col-lg-3 col-md-6 mb-4">-->
+<!--            <div class="card bg-success text-white">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Total Items</h5>-->
+<!--                    <p class="card-text" id="totalItems" style="font-size: 40px; font-weight: bold">50</p>-->
+<!--                </div>-->
+<!--                <div class="card-footer">-->
+<!--                    <a href="#" class="text-white">View Details</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Total Orders Card &ndash;&gt;-->
+<!--        <div class="col-lg-3 col-md-6 mb-4">-->
+<!--            <div class="card bg-warning text-dark">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Total Orders</h5>-->
+<!--                    <p class="card-text" id="totalOrders" style="font-size: 40px; font-weight: bold">200</p>-->
+<!--                </div>-->
+<!--                <div class="card-footer">-->
+<!--                    <a href="#" class="text-dark">View Details</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Total Sales Card &ndash;&gt;-->
+<!--        <div class="col-lg-3 col-md-6 mb-4">-->
+<!--            <div class="card bg-danger text-white">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Total Sales</h5>-->
+<!--                    <p class="card-text" id="totalSales" style="font-size: 40px; font-weight: bold">Rs 5,000</p>-->
+<!--                </div>-->
+<!--                <div class="card-footer">-->
+<!--                    <a href="#" class="text-white">View Details</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Recent Orders Section &ndash;&gt;-->
+<!--    <h3 class="mb-3">Recent Orders</h3>-->
+<!--    <table class="table table-striped">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>Order ID</th>-->
+<!--            <th>Customer</th>-->
+<!--            <th>Date</th>-->
+<!--            <th>Total (Rs)</th>-->
+<!--            <th>Status</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Kaveesha Rukshan</td>-->
+<!--            <td>2024-09-30</td>-->
+<!--            <td>100.00</td>-->
+<!--            <td><span class="badge bg-success">Completed</span></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Saman Perera</td>-->
+<!--            <td>2024-09-30</td>-->
+<!--            <td>50.00</td>-->
+<!--            <td><span class="badge bg-warning">Pending</span></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Shanaya Devindi</td>-->
+<!--            <td>2024-09-29</td>-->
+<!--            <td>75.00</td>-->
+<!--            <td><span class="badge bg-danger">Cancelled</span></td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
