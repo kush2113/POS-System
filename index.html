@@ -226,6 +226,8 @@
     </head>
 
     <body>
+
+
         <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #2f3542" >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Kushan POS System</a>
@@ -300,26 +302,26 @@
                 <div class="col-lg-6 col-md-8 col-sm-10">
                     <form class="form mb-4">
                         <label>
-                            <input class="input" type="number" placeholder="" required="">
+                            <input class="input" type="number" placeholder="" required="" id="id">
                             <span>ID</span>
                         </label>
                         <label>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input class="input" type="text" placeholder="" required="" id="name">
                             <span>Name</span>
                         </label>
                         <label>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input class="input" type="text" placeholder="" required="" id="address">
                             <span>Address</span>
                         </label>
                         <label>
-                            <input class="input" type="tel" placeholder="" required="">
+                            <input class="input" type="tel" placeholder="" required="" id="phone">
                             <span>Tel</span>
                         </label>
                         <div class="d-flex justify-content-between mt-4" >
-                            <button type="button" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-primary">Update</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="reset" class="btn btn-warning">Clear</button>
+                            <button id="customersave" type="button" class="btn btn-success">Save</button>
+                            <button id="customerupdate" type="button" class="btn btn-primary">Update</button>
+                            <button id="customerdelete" type="button" class="btn btn-danger">Delete</button>
+                            <button  type="reset" class="btn btn-warning">Clear</button>
                         </div>
                     </form>
                 </div>
@@ -336,36 +338,9 @@
                         <th scope="col">Tel</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="customerTableBody">
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Rukshan</td>
-                        <td>Galle</td>
-                        <td>0724356765</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Kavindu</td>
-                        <td>Kalutara</td>
-                        <td>0714545321</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Kushan</td>
-                        <td>Mathugama</td>
-                        <td>0786765454</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Dila</td>
-                        <td>Maggona</td>
-                        <td>0786756543</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Randika</td>
-                        <td>Kalutara</td>
-                        <td>0765656789</td>
+
                     </tr>
                     </tbody>
                 </table>
@@ -381,26 +356,26 @@
                 <div class="col-lg-6 col-md-8 col-sm-10">
                     <form class="form mb-4">
                         <label>
-                            <input class="input" type="number" placeholder="" required="">
+                            <input class="input" type="number" placeholder="" required="" id="itemId">
                             <span>ID</span>
                         </label>
                         <label>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input class="input" type="text" placeholder="" required="" id="itemName">
                             <span>Name</span>
                         </label>
                         <label>
-                            <input class="input" type="text" placeholder="" required="">
+                            <input class="input" type="text" placeholder="" required="" id="itemPrice">
                             <span>Unit Price</span>
                         </label>
                         <label>
-                            <input class="input" type="tel" placeholder="" required="">
+                            <input class="input" type="tel" placeholder="" required="" id="itemQty">
                             <span>Qty On Hand</span>
                         </label>
                         <div class="d-flex justify-content-between mt-4" >
-                            <button type="button" class="btn btn-success">Save</button>
-                            <button type="button" class="btn btn-primary">Update</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="reset" class="btn btn-warning">Clear</button>
+                            <button id="itemsave" type="button" class="btn btn-success">Save</button>
+                            <button id="itemupdate" type="button" class="btn btn-primary">Update</button>
+                            <button id="itemdelete" type="button" class="btn btn-danger">Delete</button>
+                            <button id="itemclear" type="reset" class="btn btn-warning">Clear</button>
                         </div>
                     </form>
                 </div>
@@ -416,36 +391,8 @@
                         <th scope="col">Tel</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="ItemTableBody" >
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mango</td>
-                        <td>100.00</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Apple</td>
-                        <td>90.00</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Orang</td>
-                        <td>50.00</td>
-                        <td>320</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Soya meat</td>
-                        <td>180.00</td>
-                        <td>400</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Shampo</td>
-                        <td>400.00</td>
-                        <td>1000</td>
                     </tr>
                     </tbody>
                 </table>
@@ -464,45 +411,39 @@
                             <div class="row g-2 mb-2">
                                 <div class="col">
                                     <label for="orderID" class="form-label">Order ID</label>
-                                    <input type="text" class="form-control"  placeholder="Order ID">
+                                    <input type="text" class="form-control"  placeholder="Order ID" id="orderid">
                                 </div>
                                 <div class="col">
                                     <label for="date" class="form-label">Date</label>
-                                    <input type="date" class="form-control" id="date">
+                                    <input type="date" class="form-control" id="date" >
                                 </div>
                             </div>
                             <div class="row g-2 mb-2">
                                 <div class="col">
-                                    <label for="autoSizingSelect" class="form-label">Customer ID</label>
-                                    <select class="form-select" id="autoSizingSelect">
-                                        <option selected>Select customer ID</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
+                                    <label for="csid" class="form-label">Customer ID</label>
+                                    <select class="form-select" id="csid">
+
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label for="customerName" class="form-label">Customer Name</label>
-                                    <input type="text" class="form-control"  placeholder="Customer Name">
+                                    <input type="text" class="form-control"  placeholder="Customer Name" id="ocustomerName">
                                 </div>
                             </div>
                             <div class="row g-2 mb-2">
                                 <div class="col">
                                     <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address" placeholder="Customer Address">
+                                    <input type="text" class="form-control" id="ocustomerAddress" placeholder="Customer Address">
                                 </div>
                             </div>
                             <div class="row g-2 mb-2">
                                 <div class="col">
                                     <label for="tel" class="form-label">Telephone Number</label>
-                                    <input type="tel" class="form-control" id="tel" placeholder="Tel">
+                                    <input type="tel" class="form-control" id="tel" placeholder="Tel" >
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="col-lg-5 col-md-6 mb-3" >
@@ -512,22 +453,19 @@
                             <div class="row g-3">
                                 <div class="col-lg-6 col-md-12">
                                     <label class="form-label">Item ID</label>
-                                    <select class="form-select">
-                                        <option selected>Select item ID</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
+                                    <select class="form-select" id="itemIdSelector">
+
                                     </select>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
-                                    <label for="inputName" class="form-label">Item name</label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Item name">
+                                    <label for="oitemName" class="form-label">Item name</label>
+                                    <input type="text" class="form-control" id="oitemName" placeholder="Item name" >
                                 </div>
                             </div>
                             <div class="row g-3">
                                 <div class="col-lg-4 col-md-12">
-                                    <label for="inputUnitPrice" class="form-label">Unit price</label>
-                                    <input type="text" class="form-control" id="inputUnitPrice" placeholder="Unit price">
+                                    <label for="oitemPrice" class="form-label">Unit price</label>
+                                    <input type="text" class="form-control" id="oitemPrice" placeholder="Unit price">
                                 </div>
                                 <div class="col-lg-4 col-md-12">
                                     <label for="qtyOnHand" class="form-label">QTY on hand</label>
@@ -535,13 +473,13 @@
                                 </div>
                                 <div class="col-lg-4 col-md-12">
                                     <label class="form-label">QTY</label>
-                                    <input type="text" class="form-control" placeholder="Qty">
+                                    <input type="text" class="form-control" placeholder="Qty" id="oqty">
                                 </div>
                             </div>
                             <div class="row g-3">
                                 <div class="col-lg-6 col-md-12">
                                     <label class="form-label">Total</label>
-                                    <input type="text" class="form-control" placeholder="Total">
+                                    <input type="text" class="form-control" placeholder="Total" id="ototal">
                                 </div>
                             </div>
                             <button type="button" class="btn btn-outline-secondary" id="cartBtn">ADD TO CART</button>
@@ -563,25 +501,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Apple</td>
-                    <td>50.00</td>
-                    <td>2</td>
-                    <td>100.00</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Orange</td>
-                    <td>60.00</td>
-                    <td>1</td>
-                    <td>60.00</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Milk</td>
-                    <td>200.00</td>
-                    <td>2</td>
-                    <td>400.00</td>
+
                 </tr>
                 </tbody>
             </table>
@@ -605,7 +525,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="orderID">Order ID:</label>
-                        <p id="orderID" class="form-control">order ID</p>
+                        <p  class="form-control">order ID</p>
                     </div>
                     <div class="form-group">
                         <label for="orderDate">Date:</label>
@@ -684,15 +604,19 @@
 
 
 
+
+
+        <script src="assets/lib/jquery-3.7.1.min.js"></script>
+
         <script>
-            //nav okkoma ganno
+
             let dashboard_nav = document.getElementById("dashboard_nav")
             let customer_nav = document.getElementById("customer_nav")
             let item_nav = document.getElementById("item_nav")
             let order_nav = document.getElementById("order_nav")
             let orderD_nav = document.getElementById("orderD_nav")
 
-            //section okkoma
+
             let dashboard_section=document.getElementById("dashboard_section")
             let customer_section=document.getElementById("customer_section")
             let item_section=document.getElementById("item_section")
@@ -722,7 +646,7 @@
                 order_nav.style.color = ""
                 orderD_nav.style.color = ""
 
-                // Remove 'active' class from all nav items
+
                 dashboard_nav.classList.remove('active');
                 customer_nav.classList.add('active');
                 item_nav.classList.remove('active');
@@ -764,7 +688,7 @@
                 order_nav.style.color = "white"
                 orderD_nav.style.color = ""
 
-                // Remove 'active' class from all nav items
+
                 dashboard_nav.classList.remove('active');
                 order_nav.classList.add('active');
                 customer_nav.classList.remove('active');
@@ -785,7 +709,7 @@
                 order_nav.style.color = ""
                 orderD_nav.style.color = "white"
 
-                // Remove 'active' class from all nav items
+
                 item_nav.classList.remove('active');
                 orderD_nav.classList.add('active');
                 customer_nav.classList.remove('active');
@@ -807,7 +731,7 @@
                 order_nav.style.color = ""
                 orderD_nav.style.color = ""
 
-                // Remove 'active' class from all nav items
+
                 item_nav.classList.remove('active');
                 dashboard_nav.classList.add('active');
                 customer_nav.classList.remove('active');
@@ -816,6 +740,12 @@
             })
         </script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="controller/CustomerController.js"></script>
+    <script type="module" src="controller/ItemController.js"></script>
+    <script type="module" src="controller/OrderController.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
